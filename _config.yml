@@ -4,9 +4,9 @@ permalink: /posts/:title
 rdiscount:
   extensions: [smart]
 
-name: Zach Holman
-url: http://zachholman.com
+name: Praveen Penumaka
+url: http://praveenpenumaka.github.io
 description: A fantastic blog that is fantastic.
-twitter: holman
-github: holman
-gravatar_url: http://gravatar.com/avatar/6f63cde8b16b035280ca615f621a6c8c
+twitter: praveenpenumaka
+github: praveenpenumaka
+gravatar_url: https://s.gravatar.com/avatar/5c61a0287b2663fbe0934b82cd802542
