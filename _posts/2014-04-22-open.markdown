@@ -1,0 +1,17 @@
+---
+layout: post
+title: Openly broke
+category: posts
+draft: true
+---
+
+Wherever I see, I feel that there is something broke. I can't always pin point the issue but I can't shake the feeling. But I was able to pin point in case of open source projects. 
+
+How many of you are working on open source projects? I mean, dedicatedly. How many of you feel that trying out new project to work on is always a problem. You should have project and its dependencies setup. There are always steps that you need to follow. One for each project. It varies with operating system, it sometimes varies with architecture of machine. 
+Even if I am able to set it up successfully, it takes 
+Shouldn't this be fixed?
+
+---
+
+If you have any questions, follow and ping me on Twitter- I'm
+[@praveenpenumaka][twitter].
