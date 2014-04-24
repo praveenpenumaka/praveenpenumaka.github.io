@@ -2,19 +2,24 @@
 layout: post
 title: Openly broken
 category: posts
-draft: true
 ---
 
-Wherever I see, I feel that there is something broke. I can't always pin point the issue but I can't shake the feeling. But I was able to pin point in case of open source projects. 
+Wherever I see something, I feel that there is something broke in it. I can't always pin point the issue but I can't shake that feeling.
+ 
+I have the similar feeling regarding open source projects. I am inspired by the concept of open source and worked on few projects and learned a lot, but when it comes to working on new projects I always have one issue.
+"Understanding the process", its not always the case that open source projects are properly documented. developers busy fixing the bug or working on awesome features, they tend to forget to document or implement process.
 
-How many of you are working on open source projects? I mean, dedicatedly. How many of you feel that trying out new project to work on is always a headache. You should have project and its dependencies setup on development system. There are always steps that you need to follow. One for each project and the steps may vary with operating system, sometimes with architecture of machine. 
-Even if I am able to set it up successfully, it takes a while to understand complete code flow. It gets worse with different standards and technologies followed and used by each project. For each project, the community around it is the biggest asset and also biggest problem, they want to maintain status-quo and get comfortable with existing process. 
+Let me give you an example. I decided to work on some open source project. I should have project source and its build dependencies on my development system. There are always steps that you need to follow. One for each project and the steps may vary with operating system, sometimes with architecture of machine, . Even if I am able to set up environment successfully, it takes a while to understand complete code flow. It gets worse with different standards and technologies followed and used by each project. Most of the above steps are not documented or automated unless the project gains some popularity and someone decides it is time to change process. Sometimes, the project is big enough that community around it decides to maintain status-quo.
 
-We have so many projects available as open source. Thanks to git and github, we have one common repository for most of the projects ( at least the mirrors for rest ). Whole process is setup in simple interface for the developers to use. 
+How many of you faced this issue?
 
-For a new developer to get into open source, these things are , major barriers. For effective utilization of developer resources world wide, we should be following standard way of doing things. npm is a good example of the same but that has its own limitations. 
+For a developers world wide, who are new to open source, these are major barriers. For effective utilization of developer resources world wide, we should be following standard way of doing things. 
 
-For addressing the issue of set-up, maintainers should provide snapshot of working VM which can be directly downloaded and used or they can create a container ( like docker ) which can be used directly by developers without worrying about setting up. For setting up the coding standards, I suggest that everyone should agree on single standard for open source projects, which will be evolving over time.
+There are some major changes coming in this area. Thanks to git and github, there is one common place where I can get gist of most of the open source projects ( at least the mirrors ) and this introduced some way of standardizing the ways of doing things. 
+npm has standard way of doing things. These solutions are not complete. There are places which needs improvement.
+
+Here are my suggestions for various problems we face everyday. For addressing the issue of set-up, maintainers can provide snapshot of VM which can be directly downloaded and used or they can create a container ( like docker ) which can be used directly by developers without worrying about setting up. If someone wants to report a bug, they can just create a snapshop of this VM and submit in bug tracker.
+Tools for visualizing code or architecture of whole projects needs improvement. IDEs supporting the same needs to be evolved. 
 
 ---
 
