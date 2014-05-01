@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Bookmark collection
+title: Resouces
 category: posts
-draft:true
+draft: true
 ---
 
 I have been reading news.ycombinator.com from last 3 or 4 years and I have collection of bookmarks to rich resources for computer science.
@@ -53,3 +53,4 @@ https://news.ycombinator.com/item?id=7083921
 
 ---
 
+Praveen Penumaka
