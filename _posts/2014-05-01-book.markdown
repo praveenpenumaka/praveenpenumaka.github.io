@@ -1,0 +1,55 @@
+---
+layout: post
+title: Bookmark collection
+category: posts
+draft:true
+---
+
+I have been reading news.ycombinator.com from last 3 or 4 years and I have collection of bookmarks to rich resources for computer science.
+I am sharing ones which I use regularly and think they are useful for developers.
+
+Architecture: http://www.aosabook.org/en/
+
+This is the most awesome thing that derived from open source. If you ever want to understand architecture of any software, you should start with this huge repository which has explanation for architecture of various open source projects.
+
+http://www.joelonsoftware.com/articles/Unicode.html#
+
+Encoding is one important subject which most of the developers ignore but is actually very important. Basic essentials for developers are listed here.
+
+https://github.com/SamyPesse/How-to-Make-a-Computer-Operating-System
+http://www.greenteapress.com/thinkos/index.html
+
+These are great resources for understanding computer operating systems.
+
+http://brikis98.blogspot.in/2014/04/six-programming-paradigms-that-will.html
+
+This article changed my perspective of programming languages.
+
+http://blog.interfacevision.com/design/design-visual-progarmming-languages-snapshots/
+
+I used to wonder why there are few visual programming languages when logic says that is the next step for coding. But I was wrong, there are hell lot of them but as you can see they miss something.
+List of visual programming languages.
+
+http://www.catb.org/esr/structure-packing/
+
+I love optimization, This helps you understand how you can squeeze few bytes and save lot of memory required which writing memory intensive programs in c.
+
+http://zachholman.com/talk/if-only-i-knew-this-shit-in-college/
+
+
+Archives : http://archive.org/web/
+security: https://www.hackthis.co.uk/articles/
+Tools: https://www.sharedrop.io/
+Cheat sheet: http://overapi.com/
+
+protocols : http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html
+js : http://jstherightway.org/
+http://www.html5rocks.com/en/tutorials/websockets/basics/
+
+
+Motivation: http://www.bemmu.com/hack-your-motivation
+http://excid3.com/blog/finishing-is-all-that-matters/
+https://news.ycombinator.com/item?id=7083921
+
+---
+
