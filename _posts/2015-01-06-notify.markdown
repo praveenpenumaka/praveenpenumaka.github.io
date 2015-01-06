@@ -5,12 +5,14 @@ category: posts
 ---
 
 Few days ago, I have open sourced one of my hobby projects and I got series of queries regarding the same. I tried to answer the questions using this post.  
+
 If you are working on any complex software/system which user facing, there is high probability that you have written code to send some sort of notification to user. Email notifications are most common and convenient; Mobile applications may require SMS or push notifications; User facing web application, you may have real time notifications displayed to user; Social media notifications are being used by many systems to broadcast the message to specific domain of users or sometimes all users. So, as a developer, you will have to write code for sending notification to one or the other system and right now everyone seems to be writing same code again and again and to make it worse, we use multiple languages/technologies to do so.
 
 Personally, I remember writing code for sending email in PHP, Java and Perl. It may seem like a trivial thing and developers overlook the time taken for small piece of code, but, what if your system has to handle combination of notifications, i.e. both email and sms, or facebook and sms. Writing code is one aspect and another useless task that developers have to deal is configuration of notification channel. For example, credentials, base URLs, SMTP configurations. This gets complicate when you have multiple service providers and you have to switch between them. Third and important aspect is content that needs to be delivered via notification. Each channel may have its own restrictions, like 130 characters for twitter. Let’s say you have written code handling all this, what if you have restriction domain level restrictions for particular channel, you have to change configuration whenever you scale. This is particularly not suggested in case of cloud environment.
 
 Imagine that you have a service which needs only one time setup and all we have to do is call the service with required parameters. It would be even great if the service can save frequently used parameters as template and that template can be accessed with one template id. By sending additional data to overwrite few of the existing parameters, we can handle multiple types of notifications easily without hurdles. This is my main motive for writing the application https://github.com/praveenpenumaka/NotificationEngine. I feel that system like this can help small developers or business which may want to pay only for what they use rather than paying bulk amounts for subscribing for few standalone services which may or may not be used in future.
-I haven’t got much time to contribute more to this project and also I see that there is lot of room for improvement in code and also architecture. Please feel free to contact me for contributing or using this project.
+
+Recently, I haven’t got much time to contribute more to this project and also I see that there is lot of room for improvement in code and also architecture. Please feel free to contact me for contributing or using this project.
 
 ---
 
