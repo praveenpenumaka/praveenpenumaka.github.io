@@ -1,0 +1,28 @@
+---
+layout: post
+title: Volley
+category: posts
+---
+
+Open source community has been a great help for me to learn new stuff. Be it the software development process or coding standards or software architecture. It’s been a while since I dig into one open source project. Yesterday I got some time to look into “volley”, a network library for android. 
+
+Unlike java, it’s always been hard to manage network calls in Android. One has to know proper usage of threads, behavior of concurrent threads in Android system, handling queues and caching. Volley has made it easy for Android developers to do network calls without bothering much about any of these aspects by implementing every aspect that is necessary. User has to only create a request object, define success and failure callbacks and put these into request queue and rest will be taken care by volley internally. 
+
+Going into internals of the library, Volley request queue has two queues, cache queue and network queue. Based on the flag ( want to cache or not ) in the request object, it is placed in one of these queues.
+
+There are two types of threads that process these queues.
+
+Network Dispatcher Thread pulls the requests from network queue and does network calls to server. By default there will be four of these threads running in parallel pulling requests from one queue. Number of threads can be increased or decreased by user based on requirement. Each one of the threads picks a network request from network queue and processes it. Certain errors are handled by retry policy, which can be defined by user. By default 2500ms is set as timeout and only one retry. If request object has cache flag, it would also store the response in cache for further usage.
+
+Cache Dispatcher thread takes a request object from cache queue and checks if there is any “un-expired” cache and returns that as response instead of doing another network call. If the content is missing on the cache, it puts the request into network queue to process.
+
+Both the above kind of threads parses the response to be sent and invokes user defined callbacks, either success or failure, based on HTTP response code. 
+
+Volley also provides a toolbox with basic objects that are required for doing specific things that developers do usually. 
+Ex: ImageRequest Object, Authenticator etc. 
+
+By tweaking few configurations in volley library one can make the most out of it about which I would want to explore more.
+
+---
+
+Praveen Penumaka
