@@ -23,6 +23,9 @@ Ex: ImageRequest Object, Authenticator etc.
 
 By tweaking few configurations in volley library one can make the most out of it about which I would want to explore more.
 
+
+![screenshot]({{ site.url }}/images/Slide1.jpg)
+
 ---
 
 Praveen Penumaka
