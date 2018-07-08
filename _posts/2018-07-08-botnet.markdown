@@ -6,8 +6,6 @@ category: posts
 
 As a daily routine, I was trying to login ( ssh ) to one of my staging instances ( AWS ec2 ) but was unable to login to it with my credentials. After doing basic troubleshooting, including checking if my network is choked, and checking if CPU/network of the instance is getting choked because of some rogue process ( BTW AWS provides good dashboard for basic monitoring without login into instance ), and verifying that ssh client is properly getting authenticated. I realised that none of these issues were causing the problem.
 
-![screenshot](http://images7.alphacoders.com/354/354101.jpg)
-
 I went back to "IT Crowd" mode and tried "switching off and switching on" the instance, it worked, ...for once. I was able to login once but once my session got expired, I was not able to login again. I can't keep restarting the my instance whenever I want to connect so I went back to troubleshooting mode.
 
 If there is some answer, it must be in the logs of the system, So, I restarted the system again and connected and checked ssh logs. To my surprise there are around 12K failed login attempts, As I was checking the logs, that instance keep getting more and more login attempts with most used username password combinations. The reason for me not able to connect is that the number of login attempts are a lot and increased "btmp" log to very large size. Because of this server is not able to start my session. Lucky for us, the login attempts will be unsuccessful thanks to the fact that ec2 instance is authenticated by pem file ( private key ) instead of password.
@@ -19,8 +17,6 @@ I wanted to investigate the attack. I took the backed up logs and started analys
 For an automated attacks, everything accessible on internet is a target, irrespective of their importance to the owner. It could be happening to lots of instances that accessible from internet. I could not have thwarted this attack without tools provided by AWS. there are lot of cloud providers who don't have these tools at disposal. I have recently witnessed an attack on GoDaddy's wordpress hosting which hosts lot of websites on shared instance got hacked. The website owner had to rely on GoDaddy's support service for doing anything. Even with more than 30+ years of internet experience, we are still struggling to keep our infrastructure safe from attackers. 
 
 With the kind of growth of internet economy it is important for us to focus on security of our infrastructure. Dev/Ops needs to be equipped with better tools for defending themselves.
-
-![screenshot](https://www.yourprops.com/movieprops/default/yp501b8513bb3e38.40971178/Harry-Potter-and-the-Order-of-the-Phoenix-Dark-Arts-Defence-Basics-for-Beginners-Book-2.jpg)
 
 
 ---
