@@ -1,0 +1,27 @@
+---
+layout: post
+title: Bad filters used by tech recruiters
+category: posts
+---
+
+Talent acquisition is key for Organisation success but unfortunately it is currently driven by army of recruiters who has all the wrong filters for eliminating people. Some of them are:
+
+1. Relevant Background: This is one of the ridiculous of all filters. I have worked with great engineers who don't have a CS degree and I also worked with CS engineers who don't know basic coding. I have also seen cases people getting eliminated based on their CGPA, well, you may have just lost the best employee for your organisation.
+
+I was surprised to see some recruiters filtering the some developers who don't have particular technology on their resume. For ex: there was one good developer who worked a lot on Java, the recruiter eliminated her saying she don't have J2EE written anywhere in her profile.
+
+2. Consistency: There is some bias towards people who stick to one company for a long time, particularly recruiters from MNCs, what they don't realise is talent pool of startups work with a volatile ecosystem which makes their engagement even more volatile. You may be encouraging "un-adaptive" behaviour in your Org. 
+
+3. CTC: There is a lot of competition for good talent. If you are hesitant about matching their market CTC, you may end up with substandard resources. I really feel businesses should try to acquire them somehow, this pays off really well in end. 
+
+4. Premium colleges: This is the latest fad among a lot of recruiters, everyone wants people from premium institutes. It is extremely unfair for the rest of the 98% 
+
+5. Experience: This is a tricky situation for organisations. If no one wants to give chance to less experienced people, how will they ever become experienced? 
+
+I believe technology hiring should be done by people with technology background. If you are searching for job and see someone ( Organisation/Recruiter/HR/individuals ) eliminating talent on based on above filters, you are better off not being in such Organisation.
+
+Original post : https://www.linkedin.com/pulse/bad-filters-used-tech-recruiters-praveen-penumaka/
+
+---
+
+Praveen Penumaka
