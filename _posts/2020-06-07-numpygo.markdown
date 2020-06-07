@@ -1,0 +1,31 @@
+---
+layout: post
+title: Why I re-implemented numpy in golang?
+category: posts
+draft: true
+---
+
+As part of my office work, I am working on a service that predicts based on machine learning classification algorithm ( XGBoost ) trained on historic data. More details [here](https://blog.gojekengineering.com/en-route-to-improved-order-fulfilment-6cbab2d57358). We used golang service for orchestration/experimentation and python service for serving XGBoost. To be honest, when we started out, I had practical experience with neither xgboost nor golang.
+
+
+Around the same time, while browsing /r/MachineLearning, I stumbled on a project by Erik called (ML from scratch)[https://github.com/eriklindernoren/ML-From-Scratch], which inspired me to start implementing few of the ML algorithms for understanding the internal workings. I decided to write the code in golang instead of python as a learning opportunity and as an opportunity to write a lot of golang code. I started the project "ML-From-Scratch-In-Go" which is a golang clone of Erik's project. Quickly, I realized how much array data manipulation is needed and most of it is being handled by numpy in python implementation.
+
+
+Numpy is an elegant piece of code. NumPy's website claims that it has `a powerful N-dimensional array object`. NumPy's core is actually implemented in c++ instead of python for performance and it has a lot of functionality, a lot. There are a lot of new concepts that are abstracted out for end-user like Internal representation, broadcasting, dimension reduction, etc. I explored there were libraries that tried to replicate numpy in golang ( numgo and other libraries ) either by binding c++ code to golang or re-implementing them. My main concern is how much of numpy is covered by the semi-managed libraries? How much do I need? I do not know. The last thing I want to do is getting stuck midway because that particular library is not supporting some weird edge cases
+
+I started a library project to separate out array manipulation in golang, you know, separation of concerns and all. That is the start of the fun. Here are the things I had to go through
+
+1. 80% of my time was being spent on numpygo rather than actual ML algorithm implementation.
+2. I had to understand a lot of internal abstractions being used in numpy.
+3. I re-wrote the code at least twice to get the right architecture in place, even to this day, It still doesn't feel right.
+4. it has only basic test cases that are required for my implementation.
+5. It is certainly not optimized for performance,
+5. Looking at my golang knowledge, it probably is not the optimized way of writing code as well
+
+It took 4 months, apart from my full-time job to finish basic required functionalities of numpy along with xgboost implementation. I ended up writing which I assume 20% of numpy. Here is the [code]() on github
+
+Do I regret not picking some other library? Hell no. I had a lot of fun writing the code. I had a lot of learning on both numpy and golang that no other project could have given me. I still feel I need to learn more about both
+
+I am planning to extend the "ML from scratch" project to implement neural networks which should increase the test cases hence generalizing the numpygo library. If someone wants to improve on the project, feel free to give a PR on github
+
+More on XGBoost in later posts
