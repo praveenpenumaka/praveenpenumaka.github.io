@@ -2,7 +2,7 @@
 layout: post
 title: Why I re-implemented numpy in golang?
 category: posts
-draft: true
+draft: false
 ---
 
 As part of my office work, I am working on a service that predicts based on machine learning classification algorithm ( XGBoost ) trained on historic data. More details [here](https://blog.gojekengineering.com/en-route-to-improved-order-fulfilment-6cbab2d57358). We used golang service for orchestration/experimentation and python service for serving XGBoost. To be honest, when we started out, I had practical experience with neither xgboost nor golang.
@@ -22,7 +22,7 @@ I started a library project to separate out array manipulation in golang, you kn
 5. It is certainly not optimized for performance,
 5. Looking at my golang knowledge, it probably is not the optimized way of writing code as well
 
-It took 4 months, apart from my full-time job to finish basic required functionalities of numpy along with xgboost implementation. I ended up writing which I assume 20% of numpy. Here is the [code]() on github
+It took 4 months, apart from my full-time job to finish basic required functionalities of numpy along with xgboost implementation. I ended up writing which I assume 20% of numpy. Here is the [code](https://github.com/praveenpenumaka/numpygo) on github
 
 Do I regret not picking some other library? Hell no. I had a lot of fun writing the code. I had a lot of learning on both numpy and golang that no other project could have given me. I still feel I need to learn more about both
 
