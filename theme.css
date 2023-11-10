@@ -20,6 +20,11 @@
     font-size: 1rem;
     line-height: 1.6;
   }
+
+  /* Additional padding for the entire body */
+  body {
+    @apply p-6;
+  }
 }
 
 /* Responsiveness */
@@ -39,13 +44,5 @@
 
   .simple-footer {
     @apply bg-gray-200 text-gray-600 py-4 text-center;
-  }
-}
-
-
-/* Additional padding for the entire body */
-@layer utilities {
-  body {
-    @apply p-6;
   }
 }
