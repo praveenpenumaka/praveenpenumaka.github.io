@@ -1,0 +1,43 @@
+
+/* Base configuration for Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles for the Blog */
+
+/* Typography */
+/* For Educational content, a readable, clean font is used */
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #333;
+  }
+
+  p {
+    font-family: 'Georgia', serif;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Responsiveness */
+/* Ensuring the blog is mobile-friendly and adaptable to different screen sizes */
+@layer utilities {
+  .responsive-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Simplicity */
+/* Minimalist design elements to keep the focus on content */
+@layer components {
+  .simple-navbar {
+    @apply bg-white py-2 shadow-md;
+  }
+
+  .simple-footer {
+    @apply bg-gray-200 text-gray-600 py-4 text-center;
+  }
+}
