@@ -4,51 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InquireInfinitum - A Journey of Endless Discovery</title><style>
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Adding padding to the body within the base layer for highest priority */
-@layer base {
-    body {
-        @apply p-6;
-    }
-
-    /* Typography for educational content, a readable, clean font is used */
-    h1, h2, h3, h4 {
-        font-family: 'Helvetica', 'Arial', sans-serif;
-        color: #333;
-    }
-
-    p {
-        font-family: 'Georgia', serif;
-        color: #666;
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-}
-
-/* Ensure the blog is mobile-friendly and adaptable to different screen sizes */
-@layer utilities {
-    .responsive-container {
-        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-    }
-}
-
-/* Minimalist design elements to keep the focus on content */
-@layer components {
-    .simple-navbar {
-        @apply bg-white py-2 shadow-md;
-    }
-
-    .simple-footer {
-        @apply bg-gray-200 text-gray-600 py-4 text-center;
-    }
-}
-
-</style>
+    <title>InquireInfinitum - A Journey of Endless Discovery</title>
     <!-- Tailwind CSS CDN for demonstration. For production, consider a local setup -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Custom Theme CSS -->
@@ -61,6 +17,7 @@
             padding: 1.5rem; /* Equivalent to Tailwind's p-6 */
         }
     </style>
+<link rel="stylesheet" href="theme.css">
 </head>
 <body>
 <nav class="simple-navbar">
