@@ -41,3 +41,11 @@
     @apply bg-gray-200 text-gray-600 py-4 text-center;
   }
 }
+
+
+/* Additional padding for the entire body */
+@layer utilities {
+  body {
+    @apply p-6;
+  }
+}
