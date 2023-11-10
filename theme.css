@@ -1,48 +1,42 @@
 
-/* Base configuration for Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Styles for the Blog */
-
-/* Typography */
-/* For Educational content, a readable, clean font is used */
+/* Adding padding to the body within the base layer for highest priority */
 @layer base {
-  h1, h2, h3, h4 {
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    color: #333;
-  }
+    body {
+        @apply p-6;
+    }
 
-  p {
-    font-family: 'Georgia', serif;
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+    /* Typography for educational content, a readable, clean font is used */
+    h1, h2, h3, h4 {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        color: #333;
+    }
 
-  /* Additional padding for the entire body */
-  body {
-    @apply p-6;
-  }
+    p {
+        font-family: 'Georgia', serif;
+        color: #666;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
-/* Responsiveness */
-/* Ensuring the blog is mobile-friendly and adaptable to different screen sizes */
+/* Ensure the blog is mobile-friendly and adaptable to different screen sizes */
 @layer utilities {
-  .responsive-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
+    .responsive-container {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
 }
 
-/* Simplicity */
 /* Minimalist design elements to keep the focus on content */
 @layer components {
-  .simple-navbar {
-    @apply bg-white py-2 shadow-md;
-  }
+    .simple-navbar {
+        @apply bg-white py-2 shadow-md;
+    }
 
-  .simple-footer {
-    @apply bg-gray-200 text-gray-600 py-4 text-center;
-  }
+    .simple-footer {
+        @apply bg-gray-200 text-gray-600 py-4 text-center;
+    }
 }
