@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Why I implemented numpy in Go · Praveen Penumaka
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Praveen Penumaka">
+<meta name="description" content="As part of my office work, I am working on a service that predicts based on machine learning classification algorithm ( XGBoost ) trained on historic data. More details here. We used golang service for orchestration/experimentation and python service for serving XGBoost. To be honest, when we started out, I had practical experience with neither xgboost nor golang.
+Around the same time, while browsing /r/MachineLearning, I stumbled on a project by Erik called ML from scratch, which inspired me to start implementing few of the ML algorithms for understanding the internal workings. I decided to write the code in golang instead of python as a learning opportunity and as an opportunity to write a lot of golang code. I started the project “ML-From-Scratch-In-Go” which is a golang clone of Erik’s project. Quickly, I realized how much array data manipulation is needed and most of it is being handled by numpy in python implementation.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Why I implemented numpy in Go">
+  <meta name="twitter:description" content="As part of my office work, I am working on a service that predicts based on machine learning classification algorithm ( XGBoost ) trained on historic data. More details here. We used golang service for orchestration/experimentation and python service for serving XGBoost. To be honest, when we started out, I had practical experience with neither xgboost nor golang.
+Around the same time, while browsing /r/MachineLearning, I stumbled on a project by Erik called ML from scratch, which inspired me to start implementing few of the ML algorithms for understanding the internal workings. I decided to write the code in golang instead of python as a learning opportunity and as an opportunity to write a lot of golang code. I started the project “ML-From-Scratch-In-Go” which is a golang clone of Erik’s project. Quickly, I realized how much array data manipulation is needed and most of it is being handled by numpy in python implementation.">
+
+<meta property="og:url" content="https://praveenpenumaka.github.io/posts/why-i-implemented-numpy-in-go/">
+  <meta property="og:site_name" content="Praveen Penumaka">
+  <meta property="og:title" content="Why I implemented numpy in Go">
+  <meta property="og:description" content="As part of my office work, I am working on a service that predicts based on machine learning classification algorithm ( XGBoost ) trained on historic data. More details here. We used golang service for orchestration/experimentation and python service for serving XGBoost. To be honest, when we started out, I had practical experience with neither xgboost nor golang.
+Around the same time, while browsing /r/MachineLearning, I stumbled on a project by Erik called ML from scratch, which inspired me to start implementing few of the ML algorithms for understanding the internal workings. I decided to write the code in golang instead of python as a learning opportunity and as an opportunity to write a lot of golang code. I started the project “ML-From-Scratch-In-Go” which is a golang clone of Erik’s project. Quickly, I realized how much array data manipulation is needed and most of it is being handled by numpy in python implementation.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-06-07T22:23:47+05:30">
+    <meta property="article:modified_time" content="2020-06-07T22:23:47+05:30">
+
+
+
+
+<link rel="canonical" href="https://praveenpenumaka.github.io/posts/why-i-implemented-numpy-in-go/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css" integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://praveenpenumaka.github.io/">
+      Praveen Penumaka
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://praveenpenumaka.github.io/posts/why-i-implemented-numpy-in-go/">
+              Why I implemented numpy in Go
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2020-06-07T22:23:47&#43;05:30">
+                June 7, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>As part of my office work, I am working on a service that predicts based on machine learning classification algorithm ( XGBoost ) trained on historic data. More details <a href="https://blog.gojekengineering.com/en-route-to-improved-order-fulfilment-6cbab2d57358"  class="external-link" target="_blank" rel="noopener">here</a>. We used golang service for orchestration/experimentation and python service for serving XGBoost. To be honest, when we started out, I had practical experience with neither xgboost nor golang.</p>
+<p>Around the same time, while browsing <a href="https://www.reddit.com/r/MachineLearning"  class="external-link" target="_blank" rel="noopener">/r/MachineLearning</a>, I stumbled on a project by Erik called <a href="https://github.com/eriklindernoren/ML-From-Scratch"  class="external-link" target="_blank" rel="noopener">ML from scratch</a>, which inspired me to start implementing few of the ML algorithms for understanding the internal workings. I decided to write the code in golang instead of python as a learning opportunity and as an opportunity to write a lot of golang code. I started the project “ML-From-Scratch-In-Go” which is a golang clone of Erik’s project. Quickly, I realized how much array data manipulation is needed and most of it is being handled by numpy in python implementation.</p>
+<p>Numpy is an elegant piece of code. NumPy’s website claims that it has a powerful N-dimensional array object. NumPy’s core is actually implemented in c++ instead of python for performance and it has a lot of functionality, a lot. There are a lot of new concepts that are abstracted out for end-user like Internal representation, broadcasting, dimension reduction, etc. I explored there were libraries that tried to replicate numpy in golang ( numgo and other libraries ) either by binding c++ code to golang or re-implementing them. My main concern is how much of numpy is covered by the semi-managed libraries? How much do I need? I do not know. The last thing I want to do is getting stuck midway because that particular library is not supporting some weird edge cases</p>
+<p>I started a library project to separate out array manipulation in golang, you know, separation of concerns and all. That is the start of the fun. Here are the things I had to go through</p>
+<ol>
+<li>80% of my time was being spent on numpygo rather than actual ML algorithm implementation.</li>
+<li>I had to understand a lot of internal abstractions being used in numpy.</li>
+<li>I re-wrote the code at least twice to get the right architecture in place, even to this day, It still doesn’t feel right.</li>
+<li>it has only basic test cases that are required for my implementation.</li>
+<li>It is certainly not optimized for performance,</li>
+<li>Looking at my golang knowledge, it probably is not the optimized way of writing code as well</li>
+</ol>
+<p>It took 4 months, apart from my full-time job to finish basic required functionalities of numpy along with xgboost implementation. I ended up writing which I assume 20% of numpy. Here is the <a href="https://github.com/praveenpenumaka/numpygo"  class="external-link" target="_blank" rel="noopener">code</a> on github</p>
+<p>Do I regret not picking some other library? Hell no. I had a lot of fun writing the code. I had a lot of learning on both numpy and golang that no other project could have given me. I still feel I need to learn more about both</p>
+<p>I am planning to extend the “ML from scratch” project to implement neural networks which should increase the test cases hence generalizing the numpygo library. If someone wants to improve on the project, feel free to give a PR on github</p>
+<p>More on XGBoost in later posts</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2024
+     Praveen Penumaka 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

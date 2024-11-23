@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Volley · Praveen Penumaka
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Praveen Penumaka">
+<meta name="description" content="Open source community has been a great help for me to learn new stuff. Be it the software development process or coding standards or software architecture. It’s been a while since I dig into one open source project. Yesterday I got some time to look into “volley”, a network library for android.
+Unlike java, it’s always been hard to manage network calls in Android. One has to know proper usage of threads, behavior of concurrent threads in Android system, handling queues and caching. Volley has made it easy for Android developers to do network calls without bothering much about any of these aspects by implementing every aspect that is necessary. User has to only create a request object, define success and failure callbacks and put these into request queue and rest will be taken care by volley internally.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Volley">
+  <meta name="twitter:description" content="Open source community has been a great help for me to learn new stuff. Be it the software development process or coding standards or software architecture. It’s been a while since I dig into one open source project. Yesterday I got some time to look into “volley”, a network library for android.
+Unlike java, it’s always been hard to manage network calls in Android. One has to know proper usage of threads, behavior of concurrent threads in Android system, handling queues and caching. Volley has made it easy for Android developers to do network calls without bothering much about any of these aspects by implementing every aspect that is necessary. User has to only create a request object, define success and failure callbacks and put these into request queue and rest will be taken care by volley internally.">
+
+<meta property="og:url" content="https://praveenpenumaka.github.io/posts/volley/">
+  <meta property="og:site_name" content="Praveen Penumaka">
+  <meta property="og:title" content="Volley">
+  <meta property="og:description" content="Open source community has been a great help for me to learn new stuff. Be it the software development process or coding standards or software architecture. It’s been a while since I dig into one open source project. Yesterday I got some time to look into “volley”, a network library for android.
+Unlike java, it’s always been hard to manage network calls in Android. One has to know proper usage of threads, behavior of concurrent threads in Android system, handling queues and caching. Volley has made it easy for Android developers to do network calls without bothering much about any of these aspects by implementing every aspect that is necessary. User has to only create a request object, define success and failure callbacks and put these into request queue and rest will be taken care by volley internally.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-02-10T00:00:00+05:30">
+    <meta property="article:modified_time" content="2016-02-10T00:00:00+05:30">
+
+
+
+
+<link rel="canonical" href="https://praveenpenumaka.github.io/posts/volley/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css" integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://praveenpenumaka.github.io/">
+      Praveen Penumaka
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://praveenpenumaka.github.io/posts/volley/">
+              Volley
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2016-02-10T00:00:00&#43;05:30">
+                February 10, 2016
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Open source community has been a great help for me to learn new stuff. Be it the software development process or coding standards or software architecture. It’s been a while since I dig into one open source project. Yesterday I got some time to look into “volley”, a network library for android.</p>
+<p>Unlike java, it’s always been hard to manage network calls in Android. One has to know proper usage of threads, behavior of concurrent threads in Android system, handling queues and caching. Volley has made it easy for Android developers to do network calls without bothering much about any of these aspects by implementing every aspect that is necessary. User has to only create a request object, define success and failure callbacks and put these into request queue and rest will be taken care by volley internally.</p>
+<p>Going into internals of the library, Volley request queue has two queues, cache queue and network queue. Based on the flag ( want to cache or not ) in the request object, it is placed in one of these queues.</p>
+<p>There are two types of threads that process these queues.</p>
+<p>Network Dispatcher Thread pulls the requests from network queue and does network calls to server. By default there will be four of these threads running in parallel pulling requests from one queue. Number of threads can be increased or decreased by user based on requirement. Each one of the threads picks a network request from network queue and processes it. Certain errors are handled by retry policy, which can be defined by user. By default 2500ms is set as timeout and only one retry. If request object has cache flag, it would also store the response in cache for further usage.</p>
+<p>Cache Dispatcher thread takes a request object from cache queue and checks if there is any “un-expired” cache and returns that as response instead of doing another network call. If the content is missing on the cache, it puts the request into network queue to process.</p>
+<p>Both the above kind of threads parses the response to be sent and invokes user defined callbacks, either success or failure, based on HTTP response code.</p>
+<p>Volley also provides a toolbox with basic objects that are required for doing specific things that developers do usually. Ex: ImageRequest Object, Authenticator etc.</p>
+<p>By tweaking few configurations in volley library one can make the most out of it about which I would want to explore more.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2024
+     Praveen Penumaka 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

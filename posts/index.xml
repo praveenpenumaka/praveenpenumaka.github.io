@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Praveen Penumaka</title>
+    <link>https://praveenpenumaka.github.io/posts/</link>
+    <description>Recent content in Posts on Praveen Penumaka</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 Jun 2020 22:23:47 +0530</lastBuildDate>
+    <atom:link href="https://praveenpenumaka.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why I implemented numpy in Go</title>
+      <link>https://praveenpenumaka.github.io/posts/why-i-implemented-numpy-in-go/</link>
+      <pubDate>Sun, 07 Jun 2020 22:23:47 +0530</pubDate>
+      <guid>https://praveenpenumaka.github.io/posts/why-i-implemented-numpy-in-go/</guid>
+      <description>&lt;p&gt;As part of my office work, I am working on a service that predicts based on machine learning classification algorithm ( XGBoost ) trained on historic data. More details &lt;a href=&#34;https://blog.gojekengineering.com/en-route-to-improved-order-fulfilment-6cbab2d57358&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. We used golang service for orchestration/experimentation and python service for serving XGBoost. To be honest, when we started out, I had practical experience with neither xgboost nor golang.&lt;/p&gt;&#xA;&lt;p&gt;Around the same time, while browsing &lt;a href=&#34;https://www.reddit.com/r/MachineLearning&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;/r/MachineLearning&lt;/a&gt;, I stumbled on a project by Erik called &lt;a href=&#34;https://github.com/eriklindernoren/ML-From-Scratch&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ML from scratch&lt;/a&gt;, which inspired me to start implementing few of the ML algorithms for understanding the internal workings. I decided to write the code in golang instead of python as a learning opportunity and as an opportunity to write a lot of golang code. I started the project “ML-From-Scratch-In-Go” which is a golang clone of Erik’s project. Quickly, I realized how much array data manipulation is needed and most of it is being handled by numpy in python implementation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bad filters used by tech recruiters</title>
+      <link>https://praveenpenumaka.github.io/posts/bad-filters-used-by-tech-recruiters/</link>
+      <pubDate>Thu, 06 Sep 2018 00:00:00 +0530</pubDate>
+      <guid>https://praveenpenumaka.github.io/posts/bad-filters-used-by-tech-recruiters/</guid>
+      <description>&lt;p&gt;Talent acquisition is key for Organisation success but unfortunately it is currently driven by army of recruiters who has all the wrong filters for eliminating people. Some of them are:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Relevant Background: This is one of the ridiculous of all filters. I have worked with great engineers who don’t have a CS degree and I also worked with CS engineers who don’t know basic coding. I have also seen cases people getting eliminated based on their CGPA, well, you may have just lost the best employee for your organisation.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;I was surprised to see some recruiters filtering the some developers who don’t have particular technology on their resume. For ex: there was one good developer who worked a lot on Java, the recruiter eliminated her saying she don’t have J2EE written anywhere in her profile.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Botnet Attack</title>
+      <link>https://praveenpenumaka.github.io/posts/botnet-attack/</link>
+      <pubDate>Sun, 08 Jul 2018 00:00:00 +0530</pubDate>
+      <guid>https://praveenpenumaka.github.io/posts/botnet-attack/</guid>
+      <description>&lt;p&gt;As a daily routine, I was trying to login ( ssh ) to one of my staging instances ( AWS ec2 ) but was unable to login to it with my credentials. After doing basic troubleshooting, including checking if my network is choked, and checking if CPU/network of the instance is getting choked because of some rogue process ( BTW AWS provides good dashboard for basic monitoring without login into instance ), and verifying that ssh client is properly getting authenticated. I realised that none of these issues were causing the problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Volley</title>
+      <link>https://praveenpenumaka.github.io/posts/volley/</link>
+      <pubDate>Wed, 10 Feb 2016 00:00:00 +0530</pubDate>
+      <guid>https://praveenpenumaka.github.io/posts/volley/</guid>
+      <description>&lt;p&gt;Open source community has been a great help for me to learn new stuff. Be it the software development process or coding standards or software architecture. It’s been a while since I dig into one open source project. Yesterday I got some time to look into “volley”, a network library for android.&lt;/p&gt;&#xA;&lt;p&gt;Unlike java, it’s always been hard to manage network calls in Android. One has to know proper usage of threads, behavior of concurrent threads in Android system, handling queues and caching. Volley has made it easy for Android developers to do network calls without bothering much about any of these aspects by implementing every aspect that is necessary. User has to only create a request object, define success and failure callbacks and put these into request queue and rest will be taken care by volley internally.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notification Engine</title>
+      <link>https://praveenpenumaka.github.io/posts/notification-engine/</link>
+      <pubDate>Tue, 06 Jan 2015 00:00:00 +0530</pubDate>
+      <guid>https://praveenpenumaka.github.io/posts/notification-engine/</guid>
+      <description>&lt;p&gt;Few days ago, I have open sourced one of my hobby projects and I got series of queries regarding the same. I tried to answer the questions using this post.&lt;/p&gt;&#xA;&lt;p&gt;If you are working on any complex software/system which user facing, there is high probability that you have written code to send some sort of notification to user. Email notifications are most common and convenient; Mobile applications may require SMS or push notifications; User facing web application, you may have real time notifications displayed to user; Social media notifications are being used by many systems to broadcast the message to specific domain of users or sometimes all users. So, as a developer, you will have to write code for sending notification to one or the other system and right now everyone seems to be writing same code again and again and to make it worse, we use multiple languages/technologies to do so.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
