@@ -1,243 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Praveen Penumaka</title>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light dark">
-
-
-
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Praveen Penumaka – Backend Engineer &amp; Engineering Leader</title>
+<meta name="description" content="Praveen Penumaka is a backend and full-stack engineer and former CTO with 14+ years at Amazon, GoJek and startups. Companies, projects, open source, contact.">
 <meta name="author" content="Praveen Penumaka">
-<meta name="description" content="Praveen Penumaka&#39;s personal website">
-<meta name="keywords" content="blog,developer,personal">
-
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Praveen Penumaka">
-  <meta name="twitter:description" content="Praveen Penumaka&#39;s personal website">
-
-<meta property="og:url" content="https://praveenpenumaka.github.io/">
-  <meta property="og:site_name" content="Praveen Penumaka">
-  <meta property="og:title" content="Praveen Penumaka">
-  <meta property="og:description" content="Praveen Penumaka&#39;s personal website">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
-
-
-
-
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://praveenpenumaka.github.io/">
+<link rel="preconnect" href="https://www.gravatar.com">
 
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://praveenpenumaka.github.io/">
+<meta property="og:site_name" content="Praveen Penumaka">
+<meta property="og:title" content="Praveen Penumaka – Backend Engineer &amp; Engineering Leader">
+<meta property="og:description" content="Backend and full-stack engineer and former CTO with 14+ years at Amazon, GoJek and startups. Companies, projects, open source and community.">
+<meta property="og:locale" content="en">
+<meta property="profile:first_name" content="Praveen">
+<meta property="profile:last_name" content="Penumaka">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Praveen Penumaka – Backend Engineer &amp; Engineering Leader">
+<meta name="twitter:description" content="Backend and full-stack engineer and former CTO with 14+ years at Amazon, GoJek and startups.">
 
-<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://praveenpenumaka.github.io/",
+  "name": "Praveen Penumaka – Backend Engineer & Engineering Leader",
+  "inLanguage": "en",
+  "dateModified": "2026-10-15",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Praveen Penumaka",
+    "url": "https://praveenpenumaka.github.io/",
+    "jobTitle": "Senior Consulting Developer",
+    "description": "Backend and full-stack engineer and engineering leader with over 14 years of experience, including roles as Head of Technology and CTO.",
+    "email": "mailto:praveen9920@gmail.com",
+    "telephone": "+917093230444",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hyderabad",
+      "addressCountry": "IN"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Technology Madras"
+    },
+    "knowsAbout": ["Backend engineering", "Distributed systems", "Python", "Go", "TypeScript", "Computer vision", "3D reconstruction", "Gaussian splatting"],
+    "sameAs": [
+      "https://github.com/praveenpenumaka/",
+      "https://praveenpenumaka.github.io/praveen-penumaka.pdf",
+      "https://twitter.com/praveenpenumaka/"
+    ]
+  }
+}
+</script>
 
+<script>
+// Runs before first paint: enables the tabs and applies the theme saved by the rest of the site.
+(function (root) {
+  root.className = "js";
+  try {
+    var theme = localStorage.getItem("colorscheme");
+    if (theme === "dark" || theme === "light") root.setAttribute("data-theme", theme);
+  } catch (e) {}
+})(document.documentElement);
+</script>
+<style>
+/* Palette mirrors the site's Hugo Coder theme (css/coder.css, css/coder-dark.css). */
+:root {
+  --bg: #fafafa;
+  --surface: #eeeeee;
+  --text: #212121;
+  --heading: #000;
+  --muted: #616161;
+  --rule: #e0e0e0;
+  --rule-strong: #bdbdbd;
+  --accent: #1565c0;
+  --accent-strong: #0d47a1;
+  --accent-soft: #e3f2fd;
+  --on-accent: #fff;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #212121;
+  --surface: #303030;
+  --text: #dadada;
+  --heading: #f5f5f5;
+  --muted: #a6a6a6;
+  --rule: #3b3b3b;
+  --rule-strong: #5c5c5c;
+  --accent: #42a5f5;
+  --accent-strong: #90caf9;
+  --accent-soft: #1e3a52;
+  --on-accent: #121212;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #212121;
+    --surface: #303030;
+    --text: #dadada;
+    --heading: #f5f5f5;
+    --muted: #a6a6a6;
+    --rule: #3b3b3b;
+    --rule-strong: #5c5c5c;
+    --accent: #42a5f5;
+    --accent-strong: #90caf9;
+    --accent-soft: #1e3a52;
+    --on-accent: #121212;
+    color-scheme: dark;
+  }
+}
 
-  
-  
-  <link rel="stylesheet" href="/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css" integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin="anonymous" media="screen" />
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 1rem/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+@media (min-width: 48rem) { body { font-size: 1.125rem; } }
+h1, h2, h3, p, ul { margin: 0; }
+h1, h2, h3 { color: var(--heading); }
 
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: no-preference) {
+  a, .btn, .tab, .theme-toggle { transition: color 0.15s, background-color 0.15s, border-color 0.15s; }
+}
 
+.wrap { max-width: 50rem; margin: 0 auto; padding: 0 1.25rem; }
+@media (min-width: 40rem) { .wrap { padding: 0 2rem; } }
 
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem; z-index: 10;
+  padding: 0.5rem 1rem; border-radius: 0.375rem;
+  background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none;
+}
+.skip-link:focus { top: 1rem; }
 
+/* Site navigation, matching the nav on the rest of the site */
+.site-nav { display: flex; align-items: center; gap: 1rem; min-height: 4.5rem; }
+.site-nav a { color: var(--text); font-weight: 600; text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.site-title { margin-right: auto; font-size: 0.8125rem; letter-spacing: 0.05em; text-transform: uppercase; }
+.site-nav ul { display: flex; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 26rem) { .site-title { font-size: 0.9375rem; letter-spacing: 0.1em; } }
+.theme-toggle {
+  display: none; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0;
+  color: var(--text); background: none; border: 1px solid var(--rule); border-radius: 50%; cursor: pointer;
+}
+.js .theme-toggle { display: grid; }
+.theme-toggle:hover { color: var(--accent); border-color: currentColor; }
+.theme-toggle svg { width: 1.25rem; height: 1.25rem; }
 
+.icon { flex: none; width: 1.1em; height: 1.1em; fill: currentColor; }
 
-  
-    
-    
-    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
-  
+/* Profile header */
+.profile { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 1.25rem; padding: 2rem 0 2.5rem; }
+.avatar { display: block; width: 5rem; height: 5rem; border-radius: 50%; object-fit: cover; background: var(--surface); }
+h1 { font-size: clamp(1.75rem, 1.2rem + 2.4vw, 2.625rem); font-weight: 700; line-height: 1.15; }
+.tagline { margin-top: 0.375rem; color: var(--muted); font-weight: 500; line-height: 1.4; }
+.bio, .cta, .profile address { grid-column: 1 / -1; }
+.bio { margin-top: 1.75rem; }
+.bio p + p { margin-top: 1rem; }
+.cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; padding: 0.5rem 1.125rem;
+  font-size: 0.9375rem; font-weight: 600; line-height: 1.2; text-decoration: none;
+  color: var(--text); background: var(--bg); border: 1px solid var(--rule-strong); border-radius: 0.5rem;
+}
+.btn:hover { color: var(--accent); border-color: var(--accent); }
+.btn-primary, .btn-primary:hover { color: var(--on-accent); }
+.btn-primary { background: var(--accent); border-color: var(--accent); }
+.btn-primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+@media (max-width: 34rem) { .btn { flex: 1 1 auto; justify-content: center; } }
+.profile address { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin-top: 1.25rem; font-style: normal; font-size: 0.9375rem; color: var(--muted); }
+@media (min-width: 40rem) {
+  .profile { column-gap: 1.75rem; padding-top: 3rem; }
+  .avatar { width: 7rem; height: 7rem; }
+}
 
+/* Tabs. Without JavaScript the tablist stays hidden and every section shows with its heading. */
+.tabs { display: none; }
+.js .tabs {
+  display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr;
+  z-index: 2; background: var(--bg); border-bottom: 1px solid var(--rule);
+}
+.tab {
+  margin: 0 0 -1px; padding: 0.875rem 0.5rem;
+  font: inherit; font-size: 0.9375rem; font-weight: 600; line-height: 1.3; text-align: center;
+  color: var(--muted); background: none; border: 0; border-bottom: 3px solid transparent; cursor: pointer;
+}
+.tab:hover { color: var(--text); background: var(--surface); }
+.tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.tab:focus-visible { outline-offset: -2px; }
+@media (max-width: 34rem) {
+  .js .tabs { grid-template-columns: repeat(2, 1fr); gap: 0.375rem; padding: 0.5rem 0; }
+  .tab { margin: 0; padding: 0.4375rem 0.375rem; font-size: 0.875rem; line-height: 1.25; border: 1px solid var(--rule-strong); border-radius: 0.5rem; }
+  .tab[aria-selected="true"] { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
+  .tab:focus-visible { outline-offset: 2px; }
+}
+/* Keep the tabs in reach while scrolling long sections, except on very short screens. */
+@media (min-height: 36rem) {
+  .js .tabs { position: sticky; top: 0; }
+  html { scroll-padding-top: 4.5rem; }
+}
+@media (min-height: 36rem) and (max-width: 34rem) {
+  html { scroll-padding-top: 6.5rem; }
+}
 
+.panel { padding-top: 0.5rem; }
+.panel[hidden] { display: none; }
+.panel:focus-visible { outline-offset: 4px; }
+.panel > h2 { margin-top: 2.5rem; padding-bottom: 0.5rem; font-size: 1.375rem; line-height: 1.3; border-bottom: 2px solid var(--rule); }
+.js .panel > h2 {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 
- 
+/* Entries */
+.entry { padding: 1.5rem 0; }
+.entry + .entry { border-top: 1px solid var(--rule); }
+.entry-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.125rem 1rem; }
+.entry h3 { font-size: 1.1875rem; font-weight: 700; line-height: 1.35; }
+.entry h3 a { text-decoration: none; }
+.entry h3 a:hover { text-decoration: underline; }
+.entry h3 a::after {
+  content: ""; display: inline-block; width: 0.55em; height: 0.55em; margin-left: 0.35em; vertical-align: 0.05em;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M4 1h7v7H9.5V3.56l-7.44 7.44L1 9.94 8.44 2.5H4z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M4 1h7v7H9.5V3.56l-7.44 7.44L1 9.94 8.44 2.5H4z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.when { color: var(--muted); font-size: 0.875rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.role { margin-top: 0.125rem; font-weight: 500; }
+.where { color: var(--muted); font-weight: 400; }
+.entry > p:not(.role), .entry > ul { margin-top: 0.75rem; }
+.entry > ul { padding-left: 1.25rem; }
+.entry li + li { margin-top: 0.375rem; }
+.entry li::marker { color: var(--muted); }
+.entry > .stack { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-top: 1rem; padding: 0; list-style: none; }
+.stack li, .badge { padding: 0.0625rem 0.625rem; border-radius: 999px; font-size: 0.8125rem; line-height: 1.6; white-space: nowrap; }
+.entry .stack li { margin: 0; background: var(--surface); }
+.badge { display: inline-block; font-weight: 600; color: var(--accent-strong); background: var(--accent-soft); }
 
+.site-footer { margin-top: 3rem; padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--rule); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem; }
+.site-footer a { font-weight: 500; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
 
+@media print {
+  :root, :root[data-theme], :root:not([data-theme="light"]) {
+    --bg: #fff; --surface: #fff; --text: #000; --heading: #000; --muted: #444;
+    --rule: #ccc; --rule-strong: #999; --accent: #000; --accent-strong: #000; --accent-soft: #fff;
+    color-scheme: light;
+  }
+  body { font-size: 11pt; }
+  .skip-link, .site-header, .cta, .js .tabs, .site-footer { display: none; }
+  .panel[hidden] { display: block; }
+  .js .panel > h2 { position: static; width: auto; height: auto; margin: 1.5rem 0 0; overflow: visible; clip: auto; white-space: normal; }
+  .entry { break-inside: avoid; }
+  .stack li, .badge { padding: 0; }
+  .stack li + li::before { content: "· "; }
+}
 
-
-<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
-
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link rel="alternate" type="application/rss+xml" href="/index.xml" title="Praveen Penumaka" />
-
-
-<meta name="generator" content="Hugo 0.139.0">
-
-
-
-
-
+/* Homepage keeps the large centered photo and icon links from the previous index. */
+.profile.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.profile.home .avatar { width: 17rem; height: 17rem; }
+.profile.home .bio { width: 100%; text-align: left; }
+.profile.home address { justify-content: center; }
+.icon-links {
+  display: flex;
+  gap: 2rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.icon-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  min-height: 3rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.icon-links a:hover { color: var(--accent); }
+.icon-links .icon { width: 2rem; height: 2rem; }
+@media (min-width: 48rem) {
+  .profile.home .avatar { width: 20rem; height: 20rem; }
+}
+</style>
 </head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
+<header class="site-header">
+  <nav class="site-nav wrap" aria-label="Site">
+    <a class="site-title" href="/">Praveen Penumaka</a>
+    <ul>
+      <li><a href="/posts/">Blog</a></li>
+    </ul>
+    <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+    </button>
+  </nav>
+</header>
 
-
-
-
-
-<body class="preload-transitions colorscheme-auto">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
-
-
-  <main class="wrapper">
-    <nav class="navigation">
-  <section class="container">
-    
-    <a class="navigation-title" href="https://praveenpenumaka.github.io/">
-      Praveen Penumaka
-    </a>
-    
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Blog</a>
-            </li>
-          
-        
-        
-      </ul>
-    
-  </section>
-</nav>
-
-
-    <div class="content">
-      
-  <section class="container centered">
-  <div class="about">
-    
-
-  <div class="avatar"><img src="https://www.gravatar.com/avatar/5c61a0287b2663fbe0934b82cd802542?s=240&d=mp" alt="gravatar"></div>
-
-
-
-    <h1>Praveen Penumaka</h1>
-
-<h2>Senior Software Engineer </h2>
-
-
-
-    
-<ul>
-  
-    
+<main id="main" class="wrap">
+  <header class="profile home">
+    <img class="avatar" src="https://www.gravatar.com/avatar/5c61a0287b2663fbe0934b82cd802542?s=640&amp;d=mp" width="320" height="320" alt="Photo of Praveen Penumaka">
+    <div>
+      <h1>Praveen Penumaka</h1>
+      <p class="tagline">Backend engineer &amp; engineering leader</p>
+    </div>
+    <ul class="icon-links">
       <li>
-        <a href="https://github.com/praveenpenumaka/" aria-label="Github"   >
-          <i class="fa-brands fa-github fa-2x" aria-hidden="true"></i>
+        <a href="https://github.com/praveenpenumaka/" aria-label="Github">
+          <svg class="icon" viewBox="0 12 496 512" aria-hidden="true" focusable="false"><path d="M166 409Q165 413 161 413Q155 413 155 409Q156 406 160 406Q165 406 166 409M135 405Q134 408 139 410Q144 411 145 408Q146 404 141 403Q136 402 135 405M179 403Q174 404 174 408Q175 411 180 411Q185 409 185 406Q184 403 179 403M245 20Q138 22 70 90Q2 158 0 264Q1 349 47 413Q93 477 170 503Q188 504 187 491Q187 487 187 476Q187 453 187 430Q185 430 168 432Q150 433 130 428Q110 422 102 400Q102 398 94 384Q86 371 74 363Q72 362 66 355Q59 349 76 348Q77 347 90 352Q103 356 114 374Q132 401 153 401Q175 401 187 395Q191 371 203 361Q159 359 126 339Q93 320 91 250Q91 230 97 217Q102 204 114 192Q112 186 110 168Q108 150 117 124Q135 121 159 135Q184 148 186 151Q216 142 249 142Q281 142 312 151Q312 150 325 142Q337 134 353 128Q369 121 381 124Q390 150 388 168Q386 186 383 192Q395 204 402 217Q409 230 409 250Q408 298 392 321Q375 343 349 351Q323 359 294 361Q310 372 311 407Q311 444 311 473Q311 486 311 491Q310 504 328 503Q404 477 450 413Q495 349 496 264Q495 194 462 139Q428 84 372 52Q315 21 245 20M97 365Q95 367 98 370Q101 373 103 371Q105 369 102 366Q100 363 97 365M86 357Q86 359 89 361Q92 362 93 360Q94 358 91 356Q88 355 86 357M119 392Q117 395 120 399Q124 402 127 400Q128 397 125 393Q121 390 119 392M107 378Q105 380 107 384Q110 387 113 386Q115 384 113 380Q110 376 107 378Z"/></svg>
         </a>
       </li>
-    
-  
-    
       <li>
-        <a href="https://praveenpenumaka.github.io/praveen-penumaka.pdf" aria-label="Resume"   >
-          <i class="fa-solid fa-file-pdf fa-2x" aria-hidden="true"></i>
+        <a href="https://praveenpenumaka.github.io/praveen-penumaka.pdf" aria-label="Resume">
+          <svg class="icon" viewBox="0 12 512 512" aria-hidden="true" focusable="false"><path d="M0 75Q1 48 19 30Q37 12 64 11L224 11L224 139Q224 153 233 162Q242 171 256 171L384 171L384 315L176 315Q149 316 131 334Q113 352 112 379L112 523L64 523Q37 522 19 504Q1 486 0 459L0 75M384 139L256 139L256 11L384 139M176 363L208 363Q232 364 248 379Q263 395 264 419Q263 443 248 459Q232 474 208 475L192 475L192 507Q191 522 176 523Q161 522 160 507L160 459L160 379Q161 364 176 363M208 443Q230 441 232 419Q230 397 208 395L192 395L192 443L208 443M304 363L336 363Q356 364 370 377Q383 391 384 411L384 475Q383 495 370 509Q356 522 336 523L304 523Q289 522 288 507L288 379Q289 364 304 363M336 491Q351 490 352 475L352 411Q351 396 336 395L320 395L320 491L336 491M416 379Q417 364 432 363L480 363Q495 364 496 379Q495 394 480 395L448 395L448 427L480 427Q495 428 496 443Q495 458 480 459L448 459L448 507Q447 522 432 523Q417 522 416 507L416 443Z"/></svg>
         </a>
       </li>
-    
-  
-    
       <li>
-        <a href="https://twitter.com/praveenpenumaka/" aria-label="Twitter"   >
-          <i class="fa-brands fa-x-twitter fa-2x" aria-hidden="true"></i>
+        <a href="https://twitter.com/praveenpenumaka/" aria-label="Twitter">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
       </li>
-    
-  
-</ul>
+    </ul>
+    <div class="bio">
+      <p>With over 14 years in the software industry, including roles as Head of Technology and CTO, I am a hands-on full-stack and backend engineer and engineering leader. I build reliable, scalable backend services and distributed systems, from Amazon and GoJek to early-stage startups, mainly in Python, Django, Go and TypeScript on AWS and GCP.</p>
+      <p>I take end-to-end ownership of products and have delivered over 30 consumer-facing applications. My recent work focuses on computer vision and 3D reconstruction with Gaussian splatting.</p>
+    </div>
+    <address>
+      <a href="mailto:praveen9920@gmail.com">praveen9920@gmail.com</a>
+      <a href="tel:+917093230444">+91&nbsp;7093230444</a>
+      <span>Hyderabad, India</span>
+    </address>
+  </header>
 
+  <div class="tabs" role="tablist" aria-label="About Praveen">
+    <button class="tab" role="tab" type="button" id="tab-companies" aria-controls="panel-companies" aria-selected="true" data-tab="companies">Companies</button>
+    <button class="tab" role="tab" type="button" id="tab-projects" aria-controls="panel-projects" aria-selected="false" tabindex="-1" data-tab="projects">Projects</button>
+    <button class="tab" role="tab" type="button" id="tab-open-source" aria-controls="panel-open-source" aria-selected="false" tabindex="-1" data-tab="open-source">Open source contributions</button>
+    <button class="tab" role="tab" type="button" id="tab-community" aria-controls="panel-community" aria-selected="false" tabindex="-1" data-tab="community">Community</button>
   </div>
 
-  
+  <section class="panel" role="tabpanel" id="panel-companies" aria-labelledby="tab-companies" tabindex="0">
+    <h2>Companies</h2>
 
-</section>
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Abolyn</h3>
+        <p class="when">Feb 2024 – Present</p>
+      </div>
+      <p class="role">Senior Consulting Developer<span class="where"> · Hyderabad</span></p>
+      <p>Working with the founder to ideate and build a minimum viable product, including an AI-based product filtering engine and a workflow powered by AI and Selenium that collects quotes from multiple instant-quote providers into a unified view.</p>
+    </article>
 
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Swadesh (Greentiger AI)</h3>
+        <p class="when">May 2022 – Jan 2024</p>
+      </div>
+      <p class="role">Head of Technology<span class="where"> · San Francisco</span></p>
+      <ul>
+        <li>Led a cross-functional team of 4 engineers to design, build and launch a Neobank mobile app for immigrants from India to the US within 3 months, in time for the target seasonal customer base. An international remittance partner integration facilitated $100k in transactions within 2 weeks of launch.</li>
+        <li>Re-architected the Python backend to integrate multiple banking providers, working with external teams on regulatory compliance. Seamless provider switching improved leverage in negotiating financial terms.</li>
+        <li>Set the technical strategy and product roadmap with the founders; hired and mentored engineers and ran code reviews.</li>
+      </ul>
+    </article>
 
-    </div>
+    <article class="entry">
+      <div class="entry-head">
+        <h3>AtoB</h3>
+        <p class="when">Jul 2021 – Feb 2022</p>
+      </div>
+      <p class="role">Senior Software Developer<span class="where"> · Hyderabad, India</span></p>
+      <ul>
+        <li>Architected a data workflow system that gathers and processes data from multiple providers, with a scalable ingestion pipeline in Python on AWS Lambda and automated tests. It opened a new revenue stream for the startup through new product features.</li>
+        <li>Hired and mentored engineers and ran code reviews.</li>
+      </ul>
+    </article>
 
-    <footer class="footer">
-  <section class="container">
-    ©
-    
-      2015 -
-    
-    2025
-     Praveen Penumaka 
-    ·
-    
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
-    
+    <article class="entry">
+      <div class="entry-head">
+        <h3>GoJek</h3>
+        <p class="when">Jan 2019 – Jul 2021</p>
+      </div>
+      <p class="role">Engineering Manager<span class="where"> · Bangalore, India</span></p>
+      <ul>
+        <li>Worked in the Marketplace team (matchmaking, pricing and incentives) on a pricing service built in Go on Kubernetes on GCP, handling rule-based and dynamic (surge) prices. Launched surge pricing in a new country, which increased revenue from that region.</li>
+        <li>Led the deployment of a machine learning demand-forecasting service with data scientists, built for real-time decisions with minimal latency. It saved $3 million per quarter.</li>
+        <li>Led the productization and modularization of internal API services, centralizing redundant services into reusable modules that cut development time for new features.</li>
+        <li>Hired and mentored engineers, ran code reviews, and maintained automated tests and monitoring for the team's distributed systems.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>CreativeMindz</h3>
+        <p class="when">Apr 2016 – Jan 2019</p>
+      </div>
+      <p class="role">Co-Founder &amp; CTO<span class="where"> · Hyderabad, India</span></p>
+      <ul>
+        <li>Co-founded a services startup bridging industry-standard technologies and cutting-edge solutions. Managed client negotiations, onboarding and technical delivery, and owned the hiring pipeline, growing the company to 75 employees at its peak.</li>
+        <li>Delivered a complex platform for an MNC client within 3 months, which became the backbone for multiple business initiatives. The company generated over $100k in monthly revenue, with the Pizza Hut MENA application as its flagship project.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Prototyze</h3>
+        <p class="when">Feb 2015 – Feb 2016</p>
+      </div>
+      <p class="role">Head of Technology<span class="where"> · Goa, India</span></p>
+      <p>Managed a team of 40 developers building products from scratch, leading to the incubation and launch of multiple startups under the Prototyze umbrella. Set the technical strategy for each product and worked with founders, investors and business teams to make each one fundable. Three startups raised funding on the back of the products built by the team.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Amazon</h3>
+        <p class="when">Mar 2012 – Aug 2013</p>
+      </div>
+      <p class="role">Software Development Engineer<span class="where"> · Hyderabad, India</span></p>
+      <ul>
+        <li>In the "Listmania" team, built a high-throughput microservice behind user-curated product lists on product detail pages, serving large traffic volumes with near-instant responses.</li>
+        <li>Built a highly available, fault-tolerant KYC service for EU-based Amazon sellers during registration, ensuring regulatory compliance while minimizing onboarding friction.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Kony Labs</h3>
+        <p class="when">Jun 2010 – Oct 2011</p>
+      </div>
+      <p class="role">Associate Engineer<span class="where"> · Hyderabad, India</span></p>
+      <p>Sole developer of the Toyota Shopping mobile application for iOS, Android and Blackberry. Built key features including QR code scanning and Augmented Reality SDK integration, and maintained the app.</p>
+    </article>
   </section>
+
+  <section class="panel" role="tabpanel" id="panel-projects" aria-labelledby="tab-projects" tabindex="0">
+    <h2>Projects</h2>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Studio3D</h3>
+        <p class="when">Jul 2025 – Dec 2025</p>
+      </div>
+      <p>A computer vision platform that turns photos and videos into 3D Gaussian Splatting models using 3D reconstruction and photogrammetry with COLMAP, owned end to end as the only engineer (97 commits). It has a Flutter app for capture and viewing, a Django REST API, Firebase authentication and Nginx in front.</p>
+      <p>Long-running GPU training jobs run on an asynchronous queue (Celery and Redis) with separate Docker workers for COLMAP, video processing, splat training and the web viewer. The public beta is live as a subscription with usage limits, project status tracking with ETAs and downloadable models.</p>
+      <ul class="stack" aria-label="Tech stack">
+        <li>Python</li><li>Flutter</li><li>Django REST Framework</li><li>Celery</li><li>Redis</li><li>Docker</li><li>COLMAP</li><li>OpenSplat</li><li>Firebase Auth</li><li>Nginx</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Gausstream</h3>
+        <p class="when"><span class="badge">In progress</span></p>
+      </div>
+      <p>A system that streams level-of-detail (LOD) Gaussian splats to a viewer, so large scenes load progressively instead of all at once.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>returnman</h3>
+        <p class="when">May 2026 – Jul 2026</p>
+      </div>
+      <p>An early-stage, multi-tenant return and exchange platform for Shopify merchants, with a customer portal, merchant dashboard and admin dashboard in Astro, backed by a Hono REST API and a multi-tenant PostgreSQL schema.</p>
+      <p>Includes Shopify OAuth per tenant and store, Inngest workflows, vendor adapters for WhatsApp, Unicommerce and ClickPost, and CI/CD with GitHub Actions, including database migrations.</p>
+      <ul class="stack" aria-label="Tech stack">
+        <li>TypeScript</li><li>pnpm + Nx monorepo</li><li>Astro</li><li>Hono</li><li>Drizzle ORM</li><li>PostgreSQL</li><li>Inngest</li><li>Docker</li><li>Caddy</li><li>GitHub Actions</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Personal Finance Tracker</h3>
+        <p class="when">Feb 2026</p>
+      </div>
+      <p>A local-first, open source tool that reads an email export (mbox), uses a local LLM to classify financial emails and extract transactions, and stores them in SQLite. It generates an offline HTML dashboard of spending by category and over time, and no email or financial data leaves the machine.</p>
+      <ul class="stack" aria-label="Tech stack">
+        <li>Python 3.12</li><li>uv</li><li>SQLite</li><li>Ollama (llama3.2)</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Mahabharatha Game</h3>
+        <p class="when"><span class="badge">In progress</span></p>
+      </div>
+      <p>A 2D game set in Mahabharatha mythology, using AI-driven workflows for asset creation.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Personal CRM</h3>
+        <p class="when"><span class="badge">In progress</span></p>
+      </div>
+      <p>A CRM for managing personal contacts.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3><a href="https://www.forgesauna.ca/">The Forge Sauna</a></h3>
+        <p class="when">May 2026 – Aug 2026</p>
+      </div>
+      <p>Co-built the website for a mobile wood-fired sauna rental business in St. John's, Canada: a config-driven static site with rental booking forms on a Cloudflare Workers API, an admin page showing SignStack e-signature status, waiver pages with QR codes, and JSON-LD and Open Graph metadata.</p>
+      <ul class="stack" aria-label="Tech stack">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>YAML site config</li><li>Cloudflare Workers</li><li>SignStack</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3><a href="https://v-organize.co/">V-Organize</a></h3>
+        <p class="when">Jul 2026 – Oct 2026</p>
+      </div>
+      <p>Built the website for a home organizing service in Hyderabad: a multi-page static site on Cloudflare with on-site SEO (meta tags, Open Graph, JSON-LD, sitemap), a local landing page, WhatsApp booking links and Clarity analytics.</p>
+      <ul class="stack" aria-label="Tech stack">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Cloudflare Workers</li><li>JSON-LD</li><li>Microsoft Clarity</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3><a href="https://github.com/praveenpenumaka/numpygo">numpygo</a></h3>
+        <p class="when">2020</p>
+      </div>
+      <p>A NumPy-style n-dimensional array library written in Go as a learning project. 44 stars on GitHub.</p>
+      <ul class="stack" aria-label="Tech stack">
+        <li>Go</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="panel" role="tabpanel" id="panel-open-source" aria-labelledby="tab-open-source" tabindex="0">
+    <h2>Open source contributions</h2>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3><a href="https://github.com/playcanvas/splat-transform">playcanvas/splat-transform</a></h3>
+        <p class="when">2025</p>
+      </div>
+      <p>A Gaussian splat processing CLI. Merged <a href="https://github.com/playcanvas/splat-transform/pull/29">PR #29</a> adding standalone HTML viewer output from .ply files with camera and target options, and merged <a href="https://github.com/playcanvas/splat-transform/pull/65">PR #65</a> adding box and sphere filtering of Gaussians. Also proposed Flash K-Means GPU clustering for splat compression (<a href="https://github.com/playcanvas/splat-transform/issues/186">#186</a>).</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3><a href="https://github.com/google/built_value.dart">google/built_value.dart</a></h3>
+        <p class="when">2023</p>
+      </div>
+      <p>Merged <a href="https://github.com/google/built_value.dart/pull/1228">PR #1228</a> adding a Uint8List serializer using base64.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3><a href="https://github.com/WebODM/OpenSplat">WebODM/OpenSplat</a></h3>
+        <p class="when">2025</p>
+      </div>
+      <p>Proposed Python bindings (<a href="https://github.com/WebODM/OpenSplat/issues/189">#189</a>) and an official Docker image (<a href="https://github.com/WebODM/OpenSplat/issues/196">#196</a>).</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3><a href="https://github.com/MrNeRF/LichtFeld-Studio">MrNeRF/LichtFeld-Studio</a></h3>
+        <p class="when">2026</p>
+      </div>
+      <p>Proposed Flash K-Means integration (<a href="https://github.com/MrNeRF/LichtFeld-Studio/issues/1042">#1042</a>).</p>
+    </article>
+  </section>
+
+  <section class="panel" role="tabpanel" id="panel-community" aria-labelledby="tab-community" tabindex="0">
+    <h2>Community</h2>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Friends of AI</h3>
+        <p class="when">Mar 2026 – Present</p>
+      </div>
+      <p class="role">Founder and Organizer</p>
+      <p>A community of about 70 AI practitioners and enthusiasts that I founded and run. We meet for weekly Saturday sessions on research paper reading and knowledge sharing, with 30+ sessions so far, plus a Luma calendar and an occasional newsletter.</p>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="https://github.com/praveenpenumaka">GitHub</a>
+    <a href="https://www.linkedin.com/in/praveen-penumaka/">LinkedIn</a>
+    <a href="/posts/">Blog</a>
+  </div>
 </footer>
 
-  </main>
+<script>
+(function () {
+  var root = document.documentElement;
+  var toggle = document.querySelector('.theme-toggle');
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-  
+  function isDark() {
+    var theme = root.getAttribute('data-theme');
+    return theme ? theme === 'dark' : prefersDark.matches;
+  }
 
-  
-  
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
-  
+  function sync() {
+    toggle.setAttribute('aria-pressed', isDark() ? 'true' : 'false');
+  }
 
-  
+  // Same localStorage key as the theme toggle on the rest of the site (js/coder.js).
+  toggle.addEventListener('click', function () {
+    var theme = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem('colorscheme', theme); } catch (e) {}
+    sync();
+  });
 
-  
+  if (prefersDark.addEventListener) prefersDark.addEventListener('change', sync);
+  sync();
+})();
 
+(function () {
+  var tablist = document.querySelector('[role="tablist"]');
+  var tabs = Array.prototype.slice.call(tablist.querySelectorAll('[role="tab"]'));
+  var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
 
-  
+  function select(index, focus) {
+    tabs.forEach(function (tab, i) {
+      var on = i === index;
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+      tab.tabIndex = on ? 0 : -1;
+      panels[i].hidden = !on;
+    });
+    if (focus) tabs[index].focus();
+  }
 
-  
+  // If the reader has scrolled into a long section, bring the start of the new one into view.
+  function reveal(index) {
+    var offset = panels[index].getBoundingClientRect().top - tablist.offsetHeight;
+    if (offset < 0) window.scrollBy(0, offset);
+  }
 
-  
+  function indexOf(name) {
+    for (var i = 0; i < tabs.length; i++) {
+      if (tabs[i].getAttribute('data-tab') === name) return i;
+    }
+    return -1;
+  }
 
-  
+  function activate(index, focus) {
+    select(index, focus);
+    reveal(index);
+    history.replaceState(null, '', '#' + tabs[index].getAttribute('data-tab'));
+  }
 
-  
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { activate(i); });
+    tab.addEventListener('keydown', function (e) {
+      var next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+      if (next === undefined) return;
+      e.preventDefault();
+      activate((next + tabs.length) % tabs.length, true);
+    });
+  });
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+  // Ignore hashes that are not tabs, such as the skip link's #main.
+  window.addEventListener('hashchange', function () {
+    var index = indexOf(location.hash.slice(1));
+    if (index !== -1) { select(index); reveal(index); }
+  });
+  select(Math.max(indexOf(location.hash.slice(1)), 0));
+})();
+</script>
 </body>
-
 </html>
