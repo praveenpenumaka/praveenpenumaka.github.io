@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Praveen Penumaka</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Jun 2020 22:23:47 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 +0530</lastBuildDate>
     <atom:link href="https://praveenpenumaka.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Can the Browser Render Gaussian Splats with Plain DOM Elements?</title>
+      <link>https://penumpra.com/posts/dom-gaussian-splatting/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0530</pubDate>
+      <guid>https://penumpra.com/posts/dom-gaussian-splatting/</guid>
+      <description>&lt;p&gt;I&#39;ve been reading a lot of the papers, experiments, and implementations coming out around Gaussian splatting. What keeps me interested is how quickly the field moves: a new technique appears, and within months people have made it faster, smaller, and better looking.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Why I implemented numpy in Go</title>
       <link>https://praveenpenumaka.github.io/posts/why-i-implemented-numpy-in-go/</link>
@@ -22,5 +29,5 @@
       <guid>https://praveenpenumaka.github.io/posts/botnet-attack/</guid>
       <description>&lt;p&gt;As a daily routine, I was trying to login ( ssh ) to one of my staging instances ( AWS ec2 ) but was unable to login to it with my credentials. After doing basic troubleshooting, including checking if my network is choked, and checking if CPU/network of the instance is getting choked because of some rogue process ( BTW AWS provides good dashboard for basic monitoring without login into instance ), and verifying that ssh client is properly getting authenticated. I realised that none of these issues were causing the problem.&lt;/p&gt;</description>
     </item>
-    </channel>
+  </channel>
 </rss>

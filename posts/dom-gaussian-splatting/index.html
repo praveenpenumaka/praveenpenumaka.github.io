@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Can the Browser Render Gaussian Splats with Plain DOM Elements? · Praveen Penumaka
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Praveen Penumaka">
+<meta name="description" content="I&#39;ve been reading a lot of the papers, experiments, and implementations coming out around Gaussian splatting. What keeps me interested is how quickly the field moves: a new technique appears, and within months people have made it faster, smaller, and better looking.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Can the Browser Render Gaussian Splats with Plain DOM Elements?">
+  <meta name="twitter:description" content="I&#39;ve been reading a lot of the papers, experiments, and implementations coming out around Gaussian splatting. What keeps me interested is how quickly the field moves: a new technique appears, and within months people have made it faster, smaller, and better looking.">
+
+<meta property="og:url" content="https://penumpra.com/posts/dom-gaussian-splatting/">
+  <meta property="og:site_name" content="Praveen Penumaka">
+  <meta property="og:title" content="Can the Browser Render Gaussian Splats with Plain DOM Elements?">
+  <meta property="og:description" content="I&#39;ve been reading a lot of the papers, experiments, and implementations coming out around Gaussian splatting. What keeps me interested is how quickly the field moves: a new technique appears, and within months people have made it faster, smaller, and better looking.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-10-26T00:00:00+05:30">
+    <meta property="article:modified_time" content="2026-10-26T00:00:00+05:30">
+
+
+
+
+<link rel="canonical" href="https://penumpra.com/posts/dom-gaussian-splatting/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css" integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z2no5kwgu3");
+</script>
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://penumpra.com/">
+      Praveen Penumaka
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://penumpra.com/posts/dom-gaussian-splatting/">
+              Can the Browser Render Gaussian Splats with Plain DOM Elements?
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-10-26T00:00:00&#43;05:30">
+                October 26, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>I&#39;ve been reading a lot of the papers, experiments, and implementations coming out around Gaussian splatting. What keeps me interested is how quickly the field moves: a new technique appears, and within months people have made it faster, smaller, and better looking.</p>
+<p>One recurring rendering bottleneck is sorting.</p>
+<p>Gaussian splats are translucent, so they usually need to be rendered back-to-front for alpha compositing to produce the correct result. Sorting thousands, or even millions, of Gaussians whenever the camera moves can become expensive.</p>
+<p>So I started wondering whether I could skip the explicit sort and let the browser handle compositing.</p>
+<h2 id="the-experiment">The experiment</h2>
+<p>Browsers already layer and alpha-composite elements. A DOM element can have opacity, a background color, a transform, and a <code>z-index</code>.</p>
+<p>That covers most of what a projected Gaussian needs:</p>
+<ul>
+<li>Position</li>
+<li>Width and height</li>
+<li>Rotation</li>
+<li>Color</li>
+<li>Opacity</li>
+<li>Depth</li>
+</ul>
+<p>So I built a small experimental Gaussian splat renderer using plain browser elements.</p>
+<p>You can try it here: <a href="https://penumpra.com/dom-gaussian-splats/"  class="external-link" target="_blank" rel="noopener">https://penumpra.com/dom-gaussian-splats/</a></p>
+<p>The experiment supports two renderers:</p>
+<ol>
+<li>A renderer where every Gaussian is a <code>&lt;div&gt;</code></li>
+<li>A renderer where every Gaussian is an SVG <code>&lt;ellipse&gt;</code></li>
+</ol>
+<p>I wasn&#39;t trying to build the fastest Gaussian renderer; WebGL and WebGPU are the right tools for that. I just wanted to see how far the browser&#39;s existing layout and compositing could be pushed.</p>
+<h2 id="rendering-with-divs">Rendering with DIVs</h2>
+<p>For the DIV renderer, every Gaussian becomes an absolutely positioned element.</p>
+<p>CSS handles its projected ellipse:</p>
+<pre><code class="language-css">transform: translate(-50%, -50%) rotate(...);
+border-radius: 50%;
+opacity: ...;
+z-index: ...;
+</code></pre>
+<p>The Gaussian&#39;s scale and covariance set the ellipse&#39;s size and rotation. Spherical harmonics give it a view-dependent color, and the Gaussian&#39;s opacity becomes the element&#39;s opacity.</p>
+<p>Instead of sorting every frame, I quantize the camera distance and convert it into a <code>z-index</code>. I never sort the splats in JavaScript; I just assign their depth and let the browser handle stacking and compositing.</p>
+<p>Ordering isn&#39;t free, of course. The browser still has to resolve stacking and composite the elements. I just moved that work out of my renderer.</p>
+<p>On my machine, the DIV renderer stayed usable up to around 40,000 splats. Past that, memory use and DOM update costs started to show.</p>
+<p>That result was better than I expected.</p>
+<h2 id="rendering-with-svg">Rendering with SVG</h2>
+<p>SVG seemed like a natural fit at first. An SVG <code>&lt;ellipse&gt;</code> already represents the projected shape of a Gaussian, and SVG gives straightforward control over position, scale, rotation, color, and opacity.</p>
+<p>SVG has one catch, though: normal SVG elements don&#39;t support <code>z-index</code> the way positioned HTML elements do.</p>
+<p>They&#39;re painted in document order, so changing compositing order means reordering nodes or grouping them into ordered depth buckets.</p>
+<p>I settled on 256 depth buckets. That avoids a full per-Gaussian sort, but the buckets still have to sit in the right order in the SVG tree.</p>
+<p>In my tests, updating the SVG tree cost more than reusing the DIV pool.</p>
+<h2 id="reusing-what-i-could">Reusing what I could</h2>
+<p>Early versions redid too much work every frame. I moved as much as I could into caches:</p>
+<ul>
+<li>The downloaded PLY buffer is parsed only once.</li>
+<li>The selected Gaussian sample is cached.</li>
+<li>Sampling happens again only when the requested count changes.</li>
+<li>Centered positions are cached.</li>
+<li>World covariance matrices are precomputed.</li>
+<li>Projected-point storage is reused.</li>
+<li>Render-packet objects are reused.</li>
+<li>DIV elements are allocated once and updated instead of recreated.</li>
+<li>Only the selected renderer remains connected to the live document.</li>
+</ul>
+<p>Those changes helped, and they made the real bottleneck obvious: updating and compositing thousands of elements is expensive.</p>
+<p>With the camera in auto-orbit, the best I saw was about 4 FPS. That will vary with the browser, machine, renderer, and splat count, but it gives a rough idea of the limits.</p>
+<h2 id="what-about-the-gpu">What about the GPU?</h2>
+<p>WebGPU can speed up the calculations:</p>
+<ul>
+<li>Spherical-harmonic evaluation</li>
+<li>Camera transforms</li>
+<li>Covariance projection</li>
+<li>Ellipse calculation</li>
+<li>Visibility checks</li>
+</ul>
+<p>WebGPU shaders can&#39;t touch DOM or SVG elements directly, though.</p>
+<p>The results have to be copied back into JavaScript, which still has to update every element. The readback adds synchronization overhead, and the DOM bottleneck is still there.</p>
+<p>Moving just the calculations to the GPU only helped a little. A real GPU renderer would draw directly into a canvas and skip the DOM, but that&#39;s a different experiment.</p>
+<h2 id="was-it-practical">Was it practical?</h2>
+<p>Not as a production renderer for millions of Gaussians. Still, it was a fun experiment, and I learned a lot from it.</p>
+<p>It also showed me how layout, stacking, SVG ordering, JavaScript, GPU readback, and alpha compositing interact, and where the time goes.</p>
+<p>It points to something I think could be useful, too: a lightweight preview renderer.</p>
+<p>I&#39;m thinking about packaging parts of it as a Rust library that generates SVG previews (or maybe animated GIFs) of large Gaussian models on a server. It wouldn&#39;t replace an interactive GPU renderer, but it could help with docs, model galleries, social previews, or anywhere a full renderer is overkill.</p>
+<p>The source and live experiment are available here:</p>
+<ul>
+<li><strong>Demo:</strong> <a href="https://penumpra.com/dom-gaussian-splats/"  class="external-link" target="_blank" rel="noopener">https://penumpra.com/dom-gaussian-splats/</a></li>
+<li><strong>Source:</strong> <a href="https://github.com/praveenpenumaka/dom-gaussian-splats"  class="external-link" target="_blank" rel="noopener">https://github.com/praveenpenumaka/dom-gaussian-splats</a></li>
+</ul>
+<p>If you&#39;ve tried something similar, or you work on Gaussian splatting or browser rendering, I&#39;d be glad to hear about it.</p>
+<p><strong>Note:</strong> I took help from AI to edit this post.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2025
+     Praveen Penumaka 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
