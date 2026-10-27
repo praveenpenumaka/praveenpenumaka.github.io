@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Praveen Penumaka – Engineering Leader | AI/ML | 3D </title>
-<meta name="description" content="Praveen Penumaka is a backend and full-stack engineer and former CTO with 14+ years at Amazon, GoJek and startups. Companies, projects, open source, contact.">
+<meta name="description" content="Praveen Penumaka is an engineering leader who builds AI products end to end, from 3D Gaussian splatting to image and video generation. Former CTO with 14+ years at Amazon, GoJek and startups.">
 <meta name="author" content="Praveen Penumaka">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="color-scheme" content="light dark">
@@ -17,13 +17,13 @@
 <meta property="og:url" content="https://penumpra.com/">
 <meta property="og:site_name" content="Praveen Penumaka">
 <meta property="og:title" content="Praveen Penumaka – Engineering Leader | AI/ML | 3D">
-<meta property="og:description" content="Backend and full-stack engineer and former CTO with 14+ years at Amazon, GoJek and startups. Companies, projects, open source and community.">
+<meta property="og:description" content="Engineering leader who builds AI products end to end, from 3D Gaussian splatting to image and video generation. Former CTO with 14+ years at Amazon, GoJek and startups. Companies, projects, open source and community.">
 <meta property="og:locale" content="en">
 <meta property="profile:first_name" content="Praveen">
 <meta property="profile:last_name" content="Penumaka">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Praveen Penumaka – Engineering Leader | AI/ML | 3D">
-<meta name="twitter:description" content="Backend and full-stack engineer and former CTO with 14+ years at Amazon, GoJek and startups.">
+<meta name="twitter:description" content="Engineering leader who builds AI products end to end, from 3D Gaussian splatting to image and video generation. Former CTO with 14+ years at Amazon, GoJek and startups.">
 
 <script type="application/ld+json">
 {
@@ -37,8 +37,8 @@
     "@type": "Person",
     "name": "Praveen Penumaka",
     "url": "https://penumpra.com/",
-    "jobTitle": "Senior Consulting Developer",
-    "description": "Backend and full-stack engineer and engineering leader with over 14 years of experience, including roles as Head of Technology and CTO.",
+    "jobTitle": "Engineering Leader",
+    "description": "Engineering leader who builds AI products end to end, from 3D Gaussian splatting to image and video generation, with over 14 years of experience, including roles as Head of Technology and CTO.",
     "email": "mailto:praveen9920@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -49,7 +49,7 @@
       "@type": "CollegeOrUniversity",
       "name": "Indian Institute of Technology Madras"
     },
-    "knowsAbout": ["Backend engineering", "Distributed systems", "Python", "Go", "TypeScript", "Computer vision", "3D reconstruction", "Gaussian splatting"],
+    "knowsAbout": ["AI engineering", "AI/ML", "Computer vision", "3D reconstruction", "Gaussian splatting", "Python", "Go", "TypeScript", "Distributed systems", "Backend engineering"],
     "sameAs": [
       "https://github.com/praveenpenumaka/",
       "https://praveenpenumaka.github.io/praveen-penumaka.pdf",
@@ -480,6 +480,19 @@ h1 { font-size: clamp(1.75rem, 1.2rem + 2.4vw, 2.625rem); font-weight: 700; line
       <p>Long-running GPU training jobs run on an asynchronous queue (Celery and Redis) with separate Docker workers for COLMAP, video processing, splat training and the web viewer. The public beta is live as a subscription with usage limits, project status tracking with ETAs and downloadable models.</p>
       <ul class="stack" aria-label="Tech stack">
         <li>Python</li><li>Flutter</li><li>Django REST Framework</li><li>Celery</li><li>Redis</li><li>Docker</li><li>COLMAP</li><li>OpenSplat</li><li>Firebase Auth</li><li>Nginx</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>DOM Gaussian Splats</h3>
+        <p class="when">Oct 2026</p>
+      </div>
+      <p>An experiment that renders 3D Gaussian splats with plain browser elements — absolutely positioned DIVs or SVG ellipses — with no WebGL. Depth uses z-index (DIV) or depth buckets (SVG) so the browser composites instead of an explicit per-frame sort.</p>
+      <p>Usable around ~40k splats on a laptop; auto-orbit tops out around a few FPS. Built to learn where DOM/SVG compositing breaks down, and as a possible path for lightweight SVG/GIF previews.</p>
+      <p><a href="https://penumpra.com/dom-gaussian-splats/">Demo</a> · <a href="https://penumpra.com/posts/dom-gaussian-splatting/">Write-up</a> · <a href="https://github.com/praveenpenumaka/dom-gaussian-splats">Source</a></p>
+      <ul class="stack" aria-label="Tech stack">
+        <li>JavaScript</li><li>CSS</li><li>SVG</li><li>DOM</li><li>Gaussian Splatting</li>
       </ul>
     </article>
 
