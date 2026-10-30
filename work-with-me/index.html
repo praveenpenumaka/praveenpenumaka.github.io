@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work with me</title>
+<meta name="description" content="Single consulting for founders and teams who need a senior engineering leader to ship or unblock AI products, especially 3D, image, and video generation.">
+<meta name="author" content="Praveen Penumaka">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://penumpra.com/work-with-me/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://penumpra.com/work-with-me/">
+<meta property="og:site_name" content="Praveen Penumaka">
+<meta property="og:title" content="Work with me">
+<meta property="og:description" content="Single consulting for founders and teams who need a senior engineering leader to ship or unblock AI products, especially 3D, image, and video generation.">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Work with me">
+<meta name="twitter:description" content="Single consulting for founders and teams who need a senior engineering leader to ship or unblock AI products, especially 3D, image, and video generation.">
+
+<script>
+// Runs before first paint: enables the tabs and applies the theme saved by the rest of the site.
+(function (root) {
+  root.className = "js";
+  try {
+    var theme = localStorage.getItem("colorscheme");
+    if (theme === "dark" || theme === "light") root.setAttribute("data-theme", theme);
+  } catch (e) {}
+})(document.documentElement);
+</script>
+<style>
+/* Palette mirrors the site's Hugo Coder theme */
+:root {
+  --bg: #fafafa;
+  --surface: #eeeeee;
+  --text: #212121;
+  --heading: #000;
+  --muted: #616161;
+  --rule: #e0e0e0;
+  --rule-strong: #bdbdbd;
+  --accent: #1565c0;
+  --accent-strong: #0d47a1;
+  --accent-soft: #e3f2fd;
+  --on-accent: #fff;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #212121;
+  --surface: #303030;
+  --text: #dadada;
+  --heading: #f5f5f5;
+  --muted: #a6a6a6;
+  --rule: #3b3b3b;
+  --rule-strong: #5c5c5c;
+  --accent: #42a5f5;
+  --accent-strong: #90caf9;
+  --accent-soft: #1e3a52;
+  --on-accent: #121212;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #212121;
+    --surface: #303030;
+    --text: #dadada;
+    --heading: #f5f5f5;
+    --muted: #a6a6a6;
+    --rule: #3b3b3b;
+    --rule-strong: #5c5c5c;
+    --accent: #42a5f5;
+    --accent-strong: #90caf9;
+    --accent-soft: #1e3a52;
+    --on-accent: #121212;
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 1rem/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+@media (min-width: 48rem) { body { font-size: 1.125rem; } }
+h1, h2, h3, h4, p, ul, ol { margin: 0; }
+h1, h2, h3, h4 { color: var(--heading); line-height: 1.2; }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: no-preference) {
+  a, .btn, .theme-toggle { transition: color 0.15s, background-color 0.15s, border-color 0.15s; }
+}
+
+.wrap { max-width: 50rem; margin: 0 auto; padding: 0 1.25rem; }
+@media (min-width: 40rem) { .wrap { padding: 0 2rem; } }
+
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem; z-index: 10;
+  padding: 0.5rem 1rem; border-radius: 0.375rem;
+  background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none;
+}
+.skip-link:focus { top: 1rem; }
+
+/* Site navigation */
+.site-nav { display: flex; align-items: center; gap: 1rem; min-height: 4.5rem; }
+.site-nav a { color: var(--text); font-weight: 600; text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+.site-title { margin-right: auto; font-size: 0.8125rem; letter-spacing: 0.05em; text-transform: uppercase; }
+.site-nav ul { display: flex; gap: 1rem; margin: 0; padding: 0; list-style: none; flex-wrap: wrap; }
+@media (min-width: 26rem) { .site-title { font-size: 0.9375rem; letter-spacing: 0.1em; } }
+.theme-toggle {
+  display: none; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0;
+  color: var(--text); background: none; border: 1px solid var(--rule); border-radius: 50%; cursor: pointer;
+}
+.js .theme-toggle { display: grid; }
+.theme-toggle:hover { color: var(--accent); border-color: currentColor; }
+.theme-toggle svg { width: 1.25rem; height: 1.25rem; }
+
+.icon { flex: none; width: 1.1em; height: 1.1em; fill: currentColor; }
+
+main { padding: 2rem 0 3rem; }
+@media (min-width: 40rem) { main { padding: 3rem 0 4rem; } }
+
+.hero { margin-bottom: 3rem; }
+.hero h1 { font-size: clamp(2rem, 1.4rem + 3vw, 3.25rem); font-weight: 700; line-height: 1.1; margin-bottom: 1rem; }
+.hero p { font-size: clamp(1.125rem, 1rem + 0.6vw, 1.375rem); color: var(--muted); line-height: 1.6; max-width: 42rem; }
+
+section { margin: 3rem 0; }
+section h2 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem); margin-bottom: 1.5rem; }
+section h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+@media (min-width: 40rem) { section { margin: 4rem 0; } section h2 { margin-bottom: 2rem; } }
+
+p + p { margin-top: 1rem; }
+ul, ol { padding-left: 1.5rem; }
+li + li { margin-top: 0.5rem; }
+
+.offer-cards { display: grid; gap: 1.5rem; }
+@media (min-width: 48rem) { .offer-cards { grid-template-columns: repeat(2, 1fr); } }
+
+.offer-card {
+  border: 1px solid var(--rule);
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  background: var(--bg);
+}
+.offer-card h3 { margin-bottom: 0.75rem; }
+.offer-card p { color: var(--text); margin-bottom: 1rem; }
+.offer-card .meta { color: var(--muted); font-size: 0.9375rem; margin-bottom: 1rem; }
+.offer-card ul { margin-top: 1rem; }
+.offer-card li { color: var(--text); }
+
+.project-grid { display: grid; gap: 1rem; }
+@media (min-width: 40rem) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.project-card {
+  border: 1px solid var(--rule);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color 0.15s, color 0.15s;
+}
+.project-card:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
+.project-card h3 { font-size: 1.125rem; margin-bottom: 0.375rem; color: var(--heading); }
+.project-card p { color: var(--muted); font-size: 0.9375rem; }
+
+.process-list { display: grid; gap: 1rem; }
+.process-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.75rem;
+}
+.process-number {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  flex: none;
+}
+.process-item h3 { font-size: 1.125rem; margin-bottom: 0.375rem; }
+.process-item p { color: var(--text); }
+
+.cta-section {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.75rem;
+  background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--accent-soft) 40%, transparent));
+}
+.cta-section h2 { margin-bottom: 0.75rem; }
+.cta-section p { color: var(--muted); margin-bottom: 1.5rem; max-width: 36rem; margin-left: auto; margin-right: auto; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; padding: 0.5rem 1.25rem;
+  font-size: 0.9375rem; font-weight: 600; line-height: 1.2; text-decoration: none;
+  color: var(--text); background: var(--bg); border: 1px solid var(--rule-strong); border-radius: 0.5rem;
+}
+.btn:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+.btn-primary, .btn-primary:hover { color: var(--on-accent); text-decoration: none; }
+.btn-primary { background: var(--accent); border-color: var(--accent); }
+.btn-primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+
+.cta-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 1rem; }
+
+.site-footer { margin-top: 3rem; padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--rule); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem; }
+.site-footer a { font-weight: 500; text-decoration: none; color: var(--text); }
+.site-footer a:hover { text-decoration: underline; color: var(--accent); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="site-nav wrap" aria-label="Site">
+    <a class="site-title" href="/">Praveen Penumaka</a>
+    <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/posts/">Blog</a></li>
+      <li><a href="/work-with-me/">Work with me</a></li>
+    </ul>
+    <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main id="main" class="wrap">
+  <header class="hero">
+    <h1>Work with me</h1>
+    <p>I take on one consulting engagement at a time.</p>
+    <p>If you’re building something hard and need a senior engineering leader who can go deep (architecture, product decisions, and shipping), that’s the shape of the work. Clear scope. Direct collaboration. Depth over juggling many clients.</p>
+  </header>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="process-list">
+      <div class="process-item">
+        <div class="process-number">1</div>
+        <div>
+          <p>We align on the problem: what’s stuck, what “done” looks like, and whether I’m the right fit.</p>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-number">2</div>
+        <div>
+          <p>We run a focused engagement: hands-on building, advising, or both, for a defined stretch.</p>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-number">3</div>
+        <div>
+          <p>You leave with progress: shipped work, a clearer path, or both, not a slide deck that gathers dust.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>A good fit</h2>
+    <ul>
+      <li>You have a real product or prototype, not only an idea slide.</li>
+      <li>You want a partner who will challenge assumptions and help you ship.</li>
+      <li>You’re okay with one senior person going deep rather than a large bench.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Probably not a fit</h2>
+    <ul>
+      <li>You need a large team staffed for months of undifferentiated feature work.</li>
+      <li>You’re looking for a vendor to “take requirements and disappear.”</li>
+      <li>You want a long list of parallel workstreams with no single owner.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Skills &amp; domains</h2>
+    <p>Useful when the engagement touches these areas (not a menu of separate offerings):</p>
+    <ul>
+      <li>3D Gaussian splatting, from research ideas to something people can use</li>
+      <li>Real-time and browser 3D, including splat rendering</li>
+      <li>Image and video generation products</li>
+      <li>End-to-end AI product work: architecture, shipping, and iteration</li>
+      <li>Python, Django, Go, TypeScript on AWS and GCP when that’s the stack in play</li>
+    </ul>
+  </section>
+
+  <section class="cta-section">
+    <p>If that sounds useful, <a href="https://calendly.com/praveenpenumaka/new-meeting">contact me</a> and tell me what you’re building and where you’re stuck.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/posts/">Blog</a>
+    <a href="/work-with-me/">Work with me</a>
+    <a href="https://github.com/praveenpenumaka">GitHub</a>
+    <a href="https://www.linkedin.com/in/praveen-penumaka/">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return;
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function isDark() {
+    var theme = root.getAttribute('data-theme');
+    return theme ? theme === 'dark' : prefersDark.matches;
+  }
+
+  function sync() {
+    toggle.setAttribute('aria-pressed', isDark() ? 'true' : 'false');
+  }
+
+  toggle.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('colorscheme', next); } catch (e) {}
+    sync();
+  });
+
+  if (prefersDark.addEventListener) {
+    prefersDark.addEventListener('change', sync);
+  } else if (prefersDark.addListener) {
+    prefersDark.addListener(sync);
+  }
+  sync();
+})();
+</script>
+</body>
+</html>
